@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "8cbeb662-8830-4197-8f6d-c9cf37ba153f",
+		"name": "Shopping Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Health Check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "58ffeb3b-eaa3-44ba-9e77-786cb308cc80",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c8f7d7a8-feb8-4fea-b0b9-11f9d70def82",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5d8603da-16ce-49f8-82d8-a3d6cd32f75f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5d19c4ef-57e8-4330-8287-6d3fe9a3be6b",
+			"key": "baseURL",
+			"value": "https://another-nodejs-shopping-cart.herokuapp.com/"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
